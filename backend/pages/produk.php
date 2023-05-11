@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Buuubeauty-Produk</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -17,8 +17,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body id="page-top">
@@ -41,8 +42,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+            <li class="nav-item ">
+                <a class="nav-link" href="../index.php">
                 <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -51,32 +52,34 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="pages/produk.php">
+            <li class="nav-item active">
+                <a class="nav-link" href="produk.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                     <span>Produk</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="pages/kategori.php">
+                <a class="nav-link" href="kategori.php">
                 <i class="fa fa-archive" aria-hidden="true"></i>
                     <span>Kategori</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="pages/list_pesanan.php">
+                <a class="nav-link" href="list_pesanan.php">
                 <i class="fa fa-table" aria-hidden="true"></i>
                     <span>List Pesanan</span></a>
             </li>
 
             <!-- Divider -->
-           
+            
+
             <!-- Sidebar Toggler (Sidebar) -->
             
 
             <!-- Sidebar Message -->
-           
+            
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -115,7 +118,7 @@
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
+                                <i class="fa fa-search" aria-hidden=""></i>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
@@ -127,7 +130,7 @@
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
+                                            <i class="fa fa-search" aria-hidden=""></i>
                                             </button>
                                         </div>
                                     </div>
@@ -139,7 +142,7 @@
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
+                                <i class="fa fa-bell" aria-hidden="true"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
@@ -152,7 +155,7 @@
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div>
@@ -260,7 +263,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                    src="assets/img/undraw_profile.svg">
+                                    src="../assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -291,106 +294,65 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
+<div class="container-fluid">
+<h3>
+    Data Produk
+</h3>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<?php
+require_once '../database/dbkoneksi.php';
+?>
+<?php
+$query = "SELECT * FROM produk";
+$rs = $dbh->query($query);
+?>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
+<a class="btn btn-success" href="#" role="button">Tambah Produk</a><br><br>
+<table class="table table-striped table-hover" width="100%" border="1" cellspacing="2" cellpadding="2">
+    <thead>
+        <tr class="table-active">
+            <th>Kode</th>
+            <th>Nama</th>
+            <th>Harga Jual</th>
+            <th>Harga Beli</th>
+            <th>Stok</th>
+            <th>Min Stok</th>
+            <th>Deskripsi</th>
+            <th>Kategori</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $nomor  = 1;
+        foreach ($rs as $row) {
+        ?>
+            <tr >
+                <td><?= $row['kode'] ?></td>
+                <td><?= $row['nama'] ?></td>
+                <td><?= $row['harga_jual'] ?></td>
+                <td><?= $row['harga_beli'] ?></td>
+                <td><?= $row['stok'] ?></td> 
+                <td><?= $row['min_stok'] ?></td>
+                <td><?= $row['deskripsi'] ?></td>
+                <td><?= $row['kategori_produk_id'] ?></td>
+                <td>
+                <button type="button" class="btn  btn-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
+                <button type="button" class="btn  btn-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
+                <button type="button" class="btn  btn-danger m-2"><a href="../process/delete.php?iddel=<?=$row['id']?>"
+                 onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>
                 
-
-                </div>
+                </td>
+            </tr>
+        <?php
+            $nomor++;
+        }
+        ?>
+    </tbody>
+</table>
+</div>
                 <!-- /.container-fluid -->
 
             </div>
@@ -439,10 +401,10 @@
 
     
     <!-- Custom scripts for all pages-->
-    <script src="aseets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/js/sb-admin-2.min.js"></script>
     <!-- Page level custom scripts -->
-    <script src="assets/js/demo/chart-area-demo.js"></script>
-    <script src="assets/js/demo/chart-pie-demo.js"></script>
+    <script src="../assets/js/demo/chart-area-demo.js"></script>
+    <script src="../assets/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

@@ -42,9 +42,8 @@
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <a href="../index.php">Home</a>
                   <a href="products.php">Products</a>
-                  <a href="about.php">About</a>
-                  <a href="client.php">Client</a>
-                  <a href="contact.php">Contact</a>
+                  <a href="orders.php">Orders</a>
+                  <a href="backend/index.php">Admin</a>
                </div>
                <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                <a class="logo" href="../index.php"><img src="images/logo.png"></a></a>
