@@ -326,9 +326,9 @@ $rs = $dbh->query($query);
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['nama'] ?></td>
                 <td>
-                <button type="button" class="btn  btn-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
-                <button type="button" class="btn  btn-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
-                <button type="button" class="btn  btn-danger m-2"><a href="../process/delete.php?=$row['id']?>"
+                <button type="button" class="btn  btn-outline-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
+                <button type="button" class="btn  btn-outline-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
+                <button type="button" class="btn  btn-outline-danger m-2"><a href="../process/delete_kategori.php?=$row['id']?>"
                  onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>
                 
                 </td>

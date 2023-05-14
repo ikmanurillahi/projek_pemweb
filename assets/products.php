@@ -50,7 +50,7 @@
                <form class="form-inline ">
                   <div class="login_text">
                      <ul>
-                        <li><a href="#"><img src="images/user-icon.png"></a></li>
+                        <li><a href="#"><img src="../assets/images/user-icon.png"></a></li>
                         <li><a href="#"><img src="images/bag-icon.png"></a></li>
                         <li><a href="#"><img src="images/search-icon.png"></a></li>
                      </ul>
@@ -66,21 +66,21 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="product_taital">Our Products</h1>
-                  <p class="product_text">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                  
                </div>
             </div>
             <div class="product_section_2 layout_padding">
                <div class="row">
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-1.png" class="image_1">
+                        <h4 class="bursh_text">Brush MakeUp</h4>
+                        
+                        <img src="images/brush.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -89,14 +89,14 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-2.png" class="image_1">
+                        <h4 class="bursh_text">clay mask</h4>
+                       
+                        <img src="images/clay mask.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -105,14 +105,14 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-3.png" class="image_1">
+                        <h4 class="bursh_text">Mascara</h4>
+                        
+                        <img src="images/mascara.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -121,80 +121,14 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-4.png" class="image_1">
+                        <h4 class="bursh_text">MakeUp Organizer</h4>
+                        
+                        <img src="images/Makeuporganizer.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
-                              </ul>
-                           </div>
-                           <h3 class="price_text">Price $30</h3>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-5.png" class="image_1">
-                        <div class="btn_main">
-                           <div class="buy_bt">
-                              <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
-                              </ul>
-                           </div>
-                           <h3 class="price_text">Price $30</h3>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-6.png" class="image_1">
-                        <div class="btn_main">
-                           <div class="buy_bt">
-                              <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
-                              </ul>
-                           </div>
-                           <h3 class="price_text">Price $30</h3>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-7.png" class="image_1">
-                        <div class="btn_main">
-                           <div class="buy_bt">
-                              <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
-                              </ul>
-                           </div>
-                           <h3 class="price_text">Price $30</h3>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-8.png" class="image_1">
-                        <div class="btn_main">
-                           <div class="buy_bt">
-                              <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -205,14 +139,14 @@
                <div class="row">
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-9.png" class="image_1">
+                        <h4 class="bursh_text">Parfume</h4>
+                        
+                        <img src="images/Parfume.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -221,14 +155,14 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-10.png" class="image_1">
+                        <h4 class="bursh_text">Lip Product</h4>
+                       
+                        <img src="images/lip product.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -237,14 +171,14 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-11.png" class="image_1">
+                        <h4 class="bursh_text">Blush On</h4>
+                        
+                        <img src="images/blushon.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -253,14 +187,80 @@
                   </div>
                   <div class="col-lg-3 col-sm-6">
                      <div class="product_box">
-                        <h4 class="bursh_text">Beauty Bursh</h4>
-                        <p class="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                        <img src="images/img-12.png" class="image_1">
+                        <h4 class="bursh_text">Compact Powder</h4>
+                       
+                        <img src="images/compactpowder.jpg" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
-                                 <li class="active"><a href="#">Buy Now</a></li>
-                                 <li><a href="#">Buy Now</a></li>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
+                              </ul>
+                           </div>
+                           <h3 class="price_text">Price $30</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product_box">
+                        <h4 class="bursh_text">SkinCare</h4>
+                        
+                        <img src="images/skincare.jpg" class="image_1">
+                        <div class="btn_main">
+                           <div class="buy_bt">
+                              <ul>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
+                              </ul>
+                           </div>
+                           <h3 class="price_text">Price $30</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product_box">
+                        <h4 class="bursh_text">Lip Care Product</h4>
+                        
+                        <img src="images/lip care.jpg" class="image_1">
+                        <div class="btn_main">
+                           <div class="buy_bt">
+                              <ul>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
+                              </ul>
+                           </div>
+                           <h3 class="price_text">Price $30</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product_box">
+                        <h4 class="bursh_text">Eyeshadow</h4>
+                        
+                        <img src="images/eyeshadow.jpg" class="image_1">
+                        <div class="btn_main">
+                           <div class="buy_bt">
+                              <ul>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
+                              </ul>
+                           </div>
+                           <h3 class="price_text">Price $30</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="product_box">
+                        <h4 class="bursh_text">Eyeliner</h4>
+                        
+                        <img src="images/eyeliner.jpg" class="image_1">
+                        <div class="btn_main">
+                           <div class="buy_bt">
+                              <ul>
+                                 <li class="active"><a href="../backend/pages/list_pesanan.php">Buy Now</a></li>
+                                 <li><a href="../backend/pages/produk.php">Detail</a></li>
                               </ul>
                            </div>
                            <h3 class="price_text">Price $30</h3>
@@ -276,7 +276,7 @@
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
-            <div class="footer_logo"><a href="index.php"><img src="assets/images/footer-logo.png"></a></div>
+            <div class="footer_logo"><a href="index.php"><img src="images/footer-logo.png"></a></div>
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-sm-4">
