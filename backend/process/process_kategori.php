@@ -27,5 +27,5 @@ if (isset($query)) {
    $st->execute($ar_data);
 }
 
-header('location:../pages/list_pesanan.php');
+header('location:../pages/kategori.php');
 ?>

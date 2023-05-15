@@ -309,7 +309,7 @@ $query = "SELECT * FROM produk";
 $rs = $dbh->query($query);
 ?>
 
-<a class="btn btn-success" href="#" role="button">Tambah Produk</a><br><br>
+<a class="btn btn-success" href="form_produk.php" role="button">Tambah Produk</a><br><br>
 <table class="table table-striped table-hover" width="100%" border="1" cellspacing="2" cellpadding="2">
     <thead>
         <tr class="table-active">
@@ -339,7 +339,7 @@ $rs = $dbh->query($query);
                 <td><?= $row['deskripsi'] ?></td>
                 <td><?= $row['kategori_produk_id'] ?></td>
                 <td>
-                <button type="button" class="btn  btn-outline-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
+                <button type="button" class="btn  btn-outline-success m-2"><a href="../process/view.php?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
                 <button type="button" class="btn  btn-outline-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
                 <button type="button" class="btn  btn-outline-danger m-2"><a href="../process/delete.php?iddel=<?=$row['id']?>"
                  onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>

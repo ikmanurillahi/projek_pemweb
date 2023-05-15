@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>BuuuBeauty - Form Produk</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -42,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="../../index.php">
                 <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -51,32 +51,11 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item ">
-                <a class="nav-link" href="produk.php">
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/produk.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                     <span>Produk</span></a>
             </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="kategori.php">
-                <i class="fa fa-archive" aria-hidden="true"></i>
-                    <span>Kategori</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="list_pesanan.php">
-                <i class="fa fa-table" aria-hidden="true"></i>
-                    <span>List Pesanan</span></a>
-            </li>
-
-            <!-- Divider -->
-           
-            <!-- Sidebar Toggler (Sidebar) -->
-            
-
-            <!-- Sidebar Message -->
-           
         </ul>
         <!-- End of Sidebar -->
 
@@ -139,7 +118,7 @@
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
@@ -260,7 +239,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -292,52 +271,147 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                <?php
+                require_once '../database/dbkoneksi.php';
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                //membuat kondisi untuk mengedit data pelanggan 
+                if (!empty($_GET['idedit'])) {
+                $edit = $_GET['idedit'];
+                //untuk menampilkan data dengan perintah select
+                $sql = "SELECT * FROM produk WHERE id=?";
+                $st = $dbh->prepare($sql);
+                //intruksi untuk menjalankan program 
+                $st->execute([$edit]);
+                //untuk menampilkan baris di setiap data 
+                $row = $st->fetch();
+                } else {
+                //untuk membuat data baru 
+                $row = [];
+                };
+                ?>
+
+                <form method="POST" action="../process/process.php">
+                <div class="form-group row">
+                    <label for="kode" class="col-4 col-form-label">Kode</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-anchor"></i>
+                        </div>
+                        </div>
+                        <input id="kode" name="kode" type="text" class="form-control" value="">
                     </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nama" class="col-4 col-form-label">Nama Produk</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-adjust"></i>
+                        </div>
+                        </div>
+                        <input id="nama" name="nama" type="text" class="form-control" value="">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="harga_jual" class="col-4 col-form-label">Harga Jual</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-arrow-circle-o-left"></i>
+                        </div>
+                        </div>
+                        <input id="harga_jual" name="harga_jual" value="" type="number" class="form-control">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="harga_beli" class="col-4 col-form-label">Harga Beli</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-arrow-circle-up"></i>
+                        </div>
+                        </div>
+                        <input id="harga_beli" name="harga_beli" value="" type="number" class="form-control">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="stok" class="col-4 col-form-label">Stok</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </div>
+                        </div>
+                        <input id="stok" name="stok" value="" type="number" class="form-control">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="min_stok" class="col-4 col-form-label">Min.Stok</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </div>
+                        </div>
+                        <input id="min_stok" name="min_stok" value="" type="number" class="form-control">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="deskripsi" class="col-4 col-form-label">Deskripsi</label>
+                    <div class="col-8">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </div>
+                        </div>
+                        <input id="deskripsi" name="deskripsi" value="" type="text area" class="form-control">
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="kategori_produk_id" class="col-4 col-form-label">Kategori</label>
+                    <div class="col-8">
                     <?php
-                    require_once '../database/dbkoneksi.php';
+                    $kategori = "SELECT * FROM kategori_produk";
+                    $rs = $dbh->query($kategori);
                     ?>
+                    <select id="kartu_id" name="kartu_id" class="custom-select">
+                        <?php
+                        foreach ($rs as $row) {
+                        ?>
+                        <option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
+                        <?php
+                        }
+                        ?>
+
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-4 col-8">
                     <?php
-                    $query = "SELECT * FROM kategori_produk";
-                    $rs = $dbh->query($query);
+                    //melakukan validasi form 
+                    $button = (empty($edit)) ? "Simpan" : "Update";
                     ?>
-
-                    <a class="btn btn-success" href="#" role="button">Tambah Produk</a><br><br>
-                    <table class="table table-striped table-hover" width="100%" border="1" cellspacing="2" cellpadding="2">
-                        <thead>
-                            <tr class="table-active">
-                                <th>Id</th>
-                                <th>Nama</th>
-                                <th>Aksi</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $nomor  = 1;
-                            foreach ($rs as $row) {
-                            ?>
-                                <tr >
-                                    <td><?= $row['id'] ?></td>
-                                    <td><?= $row['nama'] ?></td>
-                                    <td>
-                                    <button type="button" class="btn  btn-outline-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
-                                    <button type="button" class="btn  btn-outline-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
-                                    <button type="button" class="btn  btn-outline-danger m-2"><a href="../process/delete_kategori.php?iddel=<?=$row['id']?>"
-                                    onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>
-                                    
-                                    </td>
-                                </tr>
-                            <?php
-                                $nomor++;
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                   
+                    <input type="submit" name="proses" type="submit" class="btn btn-primary" value="<?= $button ?>" />
+                    <input type="hidden" name="idedit" value="<?= $edit ?>">
+                    </div>
+                </div>
+                </form>
                 </div>
                 <!-- /.container-fluid -->
 

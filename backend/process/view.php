@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>BuuuBeauty - View Produk</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -42,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="../../index.php">
                 <i class="fa fa-home" aria-hidden="true"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -51,32 +51,11 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item ">
-                <a class="nav-link" href="produk.php">
+            <li class="nav-item active">
+                <a class="nav-link" href="../pages/produk.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                     <span>Produk</span></a>
             </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="kategori.php">
-                <i class="fa fa-archive" aria-hidden="true"></i>
-                    <span>Kategori</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="list_pesanan.php">
-                <i class="fa fa-table" aria-hidden="true"></i>
-                    <span>List Pesanan</span></a>
-            </li>
-
-            <!-- Divider -->
-           
-            <!-- Sidebar Toggler (Sidebar) -->
-            
-
-            <!-- Sidebar Message -->
-           
         </ul>
         <!-- End of Sidebar -->
 
@@ -139,7 +118,7 @@
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
@@ -260,7 +239,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../assets/img/undraw_profile.svg">
+                                    src="assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -292,52 +271,57 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                <?php
+                require_once '../database/dbkoneksi.php';
+                ?>
+                <?php
+                $_id = $_GET['id'];
+                // select * from produk where id = $_id;
+                //$sql = "SELECT a.*,b.nama as jenis FROM produk a
+                //INNER JOIN jenis_produk b ON a.jenis_produk_id=b.id WHERE a.id=?";
+                $sql = "SELECT * FROM produk WHERE id=?";
+                $st = $dbh->prepare($sql);
+                $st->execute([$_id]);
+                $row = $st->fetch();
+                //echo 'NAMA PRODUK ' . $row['nama'];
+                ?>
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
-                    <?php
-                    require_once '../database/dbkoneksi.php';
-                    ?>
-                    <?php
-                    $query = "SELECT * FROM kategori_produk";
-                    $rs = $dbh->query($query);
-                    ?>
-
-                    <a class="btn btn-success" href="#" role="button">Tambah Produk</a><br><br>
-                    <table class="table table-striped table-hover" width="100%" border="1" cellspacing="2" cellpadding="2">
-                        <thead>
-                            <tr class="table-active">
-                                <th>Id</th>
-                                <th>Nama</th>
-                                <th>Aksi</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $nomor  = 1;
-                            foreach ($rs as $row) {
-                            ?>
-                                <tr >
-                                    <td><?= $row['id'] ?></td>
-                                    <td><?= $row['nama'] ?></td>
-                                    <td>
-                                    <button type="button" class="btn  btn-outline-success m-2"><a href="#?id=<?= $row['id'] ?>"><i class="fa fa-eye" aria-hidden="true"></i></a></button>
-                                    <button type="button" class="btn  btn-outline-secondary m-2"><a href="#?idedit=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></button>
-                                    <button type="button" class="btn  btn-outline-danger m-2"><a href="../process/delete_kategori.php?iddel=<?=$row['id']?>"
-                                    onclick="if(!confirm('Anda Yakin Hapus Data Produk <?=$row['nama']?>?')) {return false}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>
-                                    
-                                    </td>
-                                </tr>
-                            <?php
-                                $nomor++;
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                   
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Kode</td>
+                            <td><?= $row['kode'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Nama</td>
+                            <td><?= $row['nama'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Harga Jual</td>
+                            <td><?= $row['harga_jual'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Harga Beli</td>
+                            <td><?= $row['harga_beli'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Stok</td>
+                            <td><?= $row['stok'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Min.Stok</td>
+                            <td><?= $row['min_stok'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td><?= $row['deskripsi'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Kategori</td>
+                            <td><?= $row['kategori_produk_id'] ?></td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
                 <!-- /.container-fluid -->
 

@@ -10,5 +10,5 @@ $st = $dbh->prepare($query);
 $st->execute([$id]);
 
 // pindahin kel hal list_pelanggan
-header('location:../pages/list_pesanan.php');
+header('location:../pages/kategori.php');
 ?>
